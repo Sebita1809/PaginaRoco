@@ -191,3 +191,20 @@ footer{
     text-align: center;
     align-self: center;
 }
+.cocina{
+    background-color: rgba(94, 141, 102, 0.5);
+    backdrop-filter: blur(5px);
+    grid-column: 1 / 6;
+    grid-row: 3 / 5 ;
+    position: relative;
+    display: flex;
+}
+.responseText{
+    overflow: scroll;
+}
+.cocina img{
+    z-index: -1;
+    padding-right: 20em;
+    position: absolute;
+    width: 30em;
+}

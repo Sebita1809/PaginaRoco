@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 const API_KEY = 'AIzaSyDS82toPDAk8Erx5xcVXDHgkwVbVuywnbA';
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-document.getElementById('generateButton').addEventListener('click', async () => {
+document.getElementById('boton').addEventListener('click', async () => {
     const inputText = document.getElementById('inputText').value;
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
@@ -17,3 +17,9 @@ document.getElementById('generateButton').addEventListener('click', async () => 
         console.error('Error al generar contenido:', error);
     }
 });
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
