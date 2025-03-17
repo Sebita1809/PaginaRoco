@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartChef</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div>
+        <a href="index.html">Back to menu</a>
+    </div>
+    <div class="fotochef">
+        <img src="chef_trabado.png">
+    </div>
+    <h1>Welcome to SmartChef</h1>
+    <div class="explicacion">
+        <p>Here you can ask for any recipies that you want. Just write all the ingredients you have down below with this promt ahead: "Give me healthy recipes that i can do whit only this ingredients:" "Your ingredients" AND START COOKING!!</p>
+    </div>
+    
+    <div class="inputandbuttom">
+        <input type="text" id="inputText" placeholder="what you want to eat today...">
+    <button id="generateButton">Generate</button>
+    </div>
+    <p id="responseText"></p>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+
+        const API_KEY = 'AIzaSyDZOKuaJOun5lSyW-f7swfVLfSRqkp3oOw';
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        document.getElementById('generateButton').addEventListener('click', async () => {
+            const inputText = document.getElementById('inputText').value;
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
+            const prompt = inputText;
+
+            try {
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                document.getElementById('responseText').innerText = response.text();
+            } catch (error) {
+                console.error('Error al generar contenido:', error);
+            }
+        });
+    </script>
+</body>
+</html>
