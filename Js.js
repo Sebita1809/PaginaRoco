@@ -37,3 +37,4 @@ document.getElementById('botonChef').addEventListener('click', async () => {
         console.error('Error al generar contenido:', error);
     }
 });
+

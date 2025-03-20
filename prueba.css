@@ -1,0 +1,11 @@
+#animation {
+    font-size: 50px;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+
+.show {
+    display: block;
+    transform: scale(1.5);
+}
