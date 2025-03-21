@@ -426,9 +426,14 @@ footer{
     width: 2em;
     z-index: 1;
 }
-.dropDownPerfil button{
+.home button{
+    margin-left: -4em;
     background-color: transparent;
     border: none;
+}
+#flechaDropdown{
+    width: 10em;
+    height: 5em;
 }
 .dropDownPerfil{
     display: flex;
@@ -440,14 +445,14 @@ footer{
 .dropdown-content {
     position: absolute;
     margin-top: 10em;
-    margin-left: 0.7em;
+    margin-left: 1.1em;
     height: 5.5em;
-    width: 10.6em;
+    width: 5em;
     padding-bottom: 0.5em;
     padding-top: 0.5em;
+    align-items: center;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    align-items: center;
     display: none; 
     background-color: white;
     z-index: 1;
