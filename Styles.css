@@ -448,11 +448,19 @@ footer{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     align-items: center;
-    justify-content: end;
     display: none; 
     background-color: white;
     z-index: 1;
-    overflow: hidden;
+    /*overflow: hidden;
+    animation: mostrarBarra 1s ease-in-out;*/
+}
+@keyframes mostrarBarra {
+    from{
+        height: 0em;
+    }
+    to{
+        height: 10.6em;
+    }
 }
 .dropdown-content a {
     color: black;
@@ -483,7 +491,6 @@ footer{
     border-radius: 50px;
     display: flex;
     align-items: center;
-    align-items: center;
     width: 100%;
     flex-direction: column;
     background-color: #EEDBBE;
@@ -501,17 +508,18 @@ footer{
 }
 .smartChefAccessHome p, .exercisessAccesHome p, .calculatorAccessHome p{
     font-size: 1.5em;
-    margin: auto;
 }
 .smartChefAccessHome img, .exercisessAccesHome img, .calculatorAccessHome img{
     width: 15em;
     margin-top: 1em;
 }
+.smartChefAccessHome a, .exercisessAccesHome a, .calculatorAccessHome a{
+    margin-top: auto;
+}
 .smartChefAccessHome button, .exercisessAccesHome button, .calculatorAccessHome button{
     padding: 1em;
     width: 8em;
     border-radius: 20px;
-    margin-top: auto;
     margin-bottom: 1em;
     background-color: #d6c2a4;
     color: #3E4544;
