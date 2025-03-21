@@ -9,4 +9,3 @@ input.addEventListener('keydown', () => {
         document.getElementById('animation').src = 'imagenes/Pixel1.jpg';
     }, 300); // Esto debe coincidir con la duración de la transición CSS
 });*/
-

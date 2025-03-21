@@ -8,6 +8,7 @@ body{
     grid-template-rows: 20% 20% 20% 20% 20%;
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
+/*SECCION ESTULADA DE index.html*/
 .titulo{
     grid-column: 2 / 5;
     grid-row: 1;
@@ -210,7 +211,53 @@ footer{
     text-align: center;
     align-self: center;
 }
+/*SECCION ESTULADA DE ia.html*/
+.tituloSmartChef{
+    grid-column: 2 / 5;
+    grid-row: 2;
+    margin-top: -0.5em;
+}
+.home button{
+    margin-left: -4em;
+    background-color: transparent;
+    border: none;
+}
+#flechaDropdown{
+    width: 10em;
+    height: 5em;
+}
+.dropdown-contentSmartChef {
+    position: absolute;
+    margin-top: 8em;
+    margin-left: 5em;
+    height: 9.5em;
+    width: 8em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    align-items: center;
+    border-radius: 20px;
+    display: none; 
+    background-color: white;
+    box-shadow: #3E4544 0px 10px 10px;
+    z-index: 1;
+    overflow: hidden;
+}
+.dropdown-contentSmartChef a {
+    color: black;
+    padding: 12px 16px;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-contentSmartChef a:hover {
+    background-color: #f1f1f1;
+}
 .cocina{
+    margin-top: -3em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 100px;
     background-color: rgba(94, 141, 102, 0.5);
     backdrop-filter: blur(5px);
     grid-column: 1 / 6;
@@ -224,17 +271,19 @@ footer{
     grid-row: 2 / 5;
     grid-column: 1 / 3;
     padding: 3em;
+    border-radius: 150px;
     align-self: center;
-    width: 90%;
-    height: 100%;
+    width: 80%;
+    height: 145%;
 }
 .cortina{
     grid-row: 2 / 5;
     grid-column: 1 / 3;
     align-self: center;
-    margin: 3em;
-    height: 100%;
-    width: 90%;
+    border-radius: 100px;
+    margin-left: 3em;
+    height: 145%;
+    width: 80%;
     background-color: transparent;
 }
 .desvanecer{
@@ -244,19 +293,21 @@ footer{
     to{
         backdrop-filter: blur(0px);
         z-index: 1;
-        width: 0%;
+        opacity: 0;
     }
     from{
         backdrop-filter: blur(10px);
         z-index: 1;
-        width: 90%;
+        opacity: 1;
     }
 
 }
 .explicacionChef{
     grid-row: 1;
     grid-column: 3 / 6;
-    padding-top: 0.5em;
+    padding-top: 0em;
+    padding-right: 2em;
+    margin: auto;
     justify-self: center;
     color: #3E4544;
     font-family: "Keania One", sans-serif;
@@ -266,6 +317,7 @@ footer{
 .consultaChef{
     grid-row: 2 / 3;
     grid-column: 3 / 6;
+    margin-top: 4em;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -273,7 +325,6 @@ footer{
     justify-self: center;
 }
 .inputChef{
-    margin-top: 2em;
     border-radius: 50px;
     border: #9F684B 5px solid;
     padding: 0.2em;
@@ -314,7 +365,8 @@ footer{
     font-size: 2em;
     grid-row: 3 / 5;
     grid-column: 3 / 6;
-    height: 10em;
+    margin-right: 3em;
+    height: 100%;
     overflow: auto;
     background-color: #9F684B;
 }
@@ -335,6 +387,7 @@ footer{
     font-family: "Inter"- sans-serif;
     font-size: 1em;
 }
+/*SECCION ESTULADA DE login.html*/
 .login{
     background-color: rgba(94, 141, 102, 0.9);
     background-repeat: no-repeat;
@@ -400,6 +453,7 @@ footer{
     color: #C2D6C5;
     font-size: 1.5em;
 }
+/*SECCION ESTULADA DE home.html*/
 .headerHome{
     grid-column: 1 / 6;
     background-color: rgba(62, 69, 68, 0.5);
@@ -525,3 +579,4 @@ footer{
 .smartChefAccessHome button:active, .exercisessAccesHome button:active, .calculatorAccessHome button:active{
     box-shadow: none;
 }
+/*SECCION ESTILADA DE */
