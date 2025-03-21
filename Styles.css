@@ -451,16 +451,7 @@ footer{
     display: none; 
     background-color: white;
     z-index: 1;
-    /*overflow: hidden;
-    animation: mostrarBarra 1s ease-in-out;*/
-}
-@keyframes mostrarBarra {
-    from{
-        height: 0em;
-    }
-    to{
-        height: 10.6em;
-    }
+    overflow: hidden;
 }
 .dropdown-content a {
     color: black;
