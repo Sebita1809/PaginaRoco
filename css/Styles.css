@@ -579,4 +579,58 @@ footer{
 .smartChefAccessHome button:active, .exercisessAccesHome button:active, .calculatorAccessHome button:active{
     box-shadow: none;
 }
-/*SECCION ESTILADA DE */
+/*SECCION ESTILADA DE SmartMacros*/
+.tituloSmartMacros{
+    grid-row: 2;
+    grid-column: 2 / 5;
+    margin: 1.2em;
+}
+.datosSmartMacros{
+    background-color: #5E8D66;
+    grid-row: 2 / 4;
+    grid-column: 1 / 4;
+    width: 80%;
+    height: 35em;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.ingresarDatosSmartChef{
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    height: 80%;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #f1f1f1;
+}
+.datosAltura{
+    display: flex;
+    flex-direction: row;
+}
+.datosPeso{
+    display: flex;
+    flex-direction: row;
+}
+.datosActividad{
+    display: flex;
+    flex-direction: row;
+}
+.datosSexo{
+    display: flex;
+    flex-direction: row;
+}
+.imgCalculadora{
+    grid-column: 3 / 6;
+    grid-row: 2 / 4;
+    justify-self: center;
+}
+.pCalculando{
+    grid-column: 3 / 6;
+    grid-row: 2 / 4;
+}
+.resultadoCalculo{
+    grid-row: 6;
+    grid-column: 1 / 6;
+}

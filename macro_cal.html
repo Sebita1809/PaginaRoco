@@ -6,21 +6,68 @@
     <title> Macros Calculator</title>
 </head>
 <body>
-    <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-    </svg></a>
-    <h1>SmartMacros</h1>
-    <p>Pesonal Information</p>
-    <input type="number" id="" min="0" max="3" step="0.01">
-    <input type="number" id="" min="0" max="300" step="0.1">
-    <select name="opciones" id="">
-        <option value="" disabled selected hidden></option>
-        <option value="">bajo</option>
-        <option value="">intermedio</option>
-        <option value="">alta</option>
-    </select>
-    <select name="" id=""></select>
-
-    <script src="javaScript/script.js"></script>
+    <header class="headerHome">
+        <div class="home">
+            <img src="imagenes/HH.ico" class="logoHHHome">
+            <button onclick="toggleDropdown()">
+                <img id="flechaDropdown" src="imagenes/barras.png" alt="">
+            </button>
+            <div id="myDropdown" class="dropdown-contentSmartChef">
+                <a href="home.html">Home</a>
+                <a href="excercise.html">SmartTrainer</a>
+                <a href="ia.html">SmartChef</a>
+                <a href="">Perfil</a>
+                <a href="">Help</a>
+            </div>
+        </div>
+        <div class="dropDownPerfil">
+            <img src="imagenes/FotoPerfilDefault.png">
+            <p>UserName</p>
+        </div>
+    </header>
+    <h1 class="tituloSmartMacros">SmartMacros</h1>
+    <div class="datosSmartMacros">
+        <div class="ingresarDatosSmartChef">
+            <p>Ingrese sus datos</p>
+            <div class="datosAltura">
+                <input type="number" id="" class="inputAltura" min="0" max="3" step="0.01">
+                <p>Altura</p>
+            </div>
+            <div class="datosPeso">
+                <input type="number" class="inputPeso" min="0" max="300" step="0.1">
+                <p>Peso</p>
+            </div>
+            <div class="datosActividad">
+                <select id="">
+                    <option class="seleccionActividad//" disabled selected>Sleccione una opcion</option>
+                    <option value="">Baja</option>
+                    <option value="">Intermedia</option>
+                    <option value="">Avanzada</option>
+                </select>
+                <p>Nivel de Actividad Fisica</p>
+            </div>
+            <div class="datosSexo">
+                <select class="seleccionSexo" id="">
+                    <option value="" selected disabled>Seleccione una opcion</option>
+                    <option value="">Femenino</option>
+                    <option value="">Masculino</option>
+                    <option value="">Prefiero no decirlo</option>
+                </select>
+                <p>Sexo</p>
+            </div>
+        </div>
+    </div>
+    <img src="imagenes/calculadora2.png" class="imgCalculadora" alt="">
+    <p>Calculating...</p>
+    <div class="resultadoCalculo">
+        <p class="pCalculando">Resultado Macronutrientes</p>
+        <div class="analisisIA">
+            <p>Nos parece que estar muy bien en relacion a la cantidad de macronutrientes que tu cuerpo necesita</p>
+        </div>
+        <div class="recomentadionesIA">
+            <p>Aquí te dejaremos unas recomendaciones para que puedas mejorar al maximo tu ingesta de macros</p>
+        </div>
+    </div>
+    <script src="javaScript/dropdown.js"></script>
 </body>
 </html>
