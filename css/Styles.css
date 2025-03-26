@@ -587,50 +587,64 @@ footer{
 }
 .datosSmartMacros{
     background-color: #5E8D66;
+    background-repeat: repeat-x;
     grid-row: 2 / 4;
     grid-column: 1 / 4;
     width: 80%;
-    height: 35em;
-    align-items: center;
+    height: 40em;
+    margin-top: 15em;
+    margin-bottom: 10em;
     justify-items: center;
     align-content: center;
 }
 .ingresarDatosSmartChef{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20%);
     width: 40em;
-    height: 80%;
-    align-content: center;
-    align-items: center;
-    justify-items: center;
+    height: 100%;
     background-color: #f1f1f1;
 }
+.tituloIngresarDatosCalculadora{
+    grid-row: 1;
+    grid-column: 1 / 6;
+    text-align: center;
+    font-size: 2em;
+}
+
 .datosAltura{
-    display: flex;
-    flex-direction: row;
+    grid-row: 2;
+    grid-column: 2;
+    position: relative;
+}
+.datosAltura label{
+    position: absolute;
+    left: 1em;
+    text-align: center;
+    width: 3em;
+    top: 20%;
+    transform: translateY(-20%);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+.datosAltura input{
+    height: 60px;
+}
+.datosAltura input:focus + label,
+input:not(:placeholder-shown) + label{
+    top: 0%;
 }
 .datosPeso{
+    grid-row: 2;
+    grid-column: 4;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .datosActividad{
-    display: flex;
-    flex-direction: row;
+    grid-row: 3 / 4;
+    grid-column: 1 / 6;
 }
 .datosSexo{
-    display: flex;
-    flex-direction: row;
-}
-.imgCalculadora{
-    grid-column: 3 / 6;
-    grid-row: 2 / 4;
-    justify-self: center;
-}
-.pCalculando{
-    grid-column: 3 / 6;
-    grid-row: 2 / 4;
-}
-.resultadoCalculo{
-    grid-row: 6;
+    grid-row: 4 / 5;
     grid-column: 1 / 6;
 }
