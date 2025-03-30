@@ -628,17 +628,56 @@ footer{
     pointer-events: none;
 }
 .datosAltura input{
-    height: 60px;
+    position: absolute;
+    font-size: 5em;
+    overflow: hidden;
+    width: 2.5em;
+    text-align: center;
+    background-color: #606d6b;
+    border: #5E8D66 0.1em solid;
+    border-radius: 10px;
+    scrollbar-width: none;
 }
 .datosAltura input:focus + label,
 input:not(:placeholder-shown) + label{
     top: 0%;
+}
+.datosAltura button{
+    background-color: #606d6b;
+    border: black 1px solid;
+    left: 12em;
+    position: relative;
+    z-index: 1;
+}
+.datosAltura img{
+    padding: 0;
+    margin: 0;
+    width: 3.7em;
+
 }
 .datosPeso{
     grid-row: 2;
     grid-column: 4;
     display: flex;
     flex-direction: column;
+}
+.datosPeso label{
+    position: relative;
+    left: 1em;
+    text-align: center;
+    width: 3em;
+    top: -10%;
+    transform: translateY(-20%);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+.datosPeso input{
+    position: absolute;
+    height: 10em;
+    width: 10em;
+    background-color: #606d6b;
+    border: #5E8D66 0.5em solid;
+    border-radius: 10px;
 }
 .datosActividad{
     grid-row: 3 / 4;
