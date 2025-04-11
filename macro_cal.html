@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+10&family=Keania+One&display=swap" rel="stylesheet">
     <title> Macros Calculator</title>
 </head>
 <body>
@@ -27,23 +28,23 @@
     </header>
     <h1 class="tituloSmartMacros">SmartMacros</h1>
     <div class="datosSmartMacros">
-        <div class="ingresarDatosSmartChef">
+        <div class="ingresarDatosSmartMacros">
             <p class="tituloIngresarDatosCalculadora">Ingrese sus datos</p>
             <div class="datosAltura">
-                <input type="number" class="inputAltura" min="0" max="3" placeholder="">
+                <input type="number" id="inputAltura" class="inputAltura" min="0" max="3" placeholder="">
                 <label>Altura(m)</label>
-                <button class="increment"><img src="imagenes/flecha.png" alt=""></button>
-                <button class="decrement"><img src="imagenes/flecha.png" alt=""></button>
+                <button class="increment" id="botonAumentoAltura"><img src="imagenes/flecha.png" alt=""></button>
+                <button class="decrement" id="botonDecrementoAltura"><img src="imagenes/flecha.png" alt=""></button>
             </div>
             <div class="datosPeso">
-                <input type="number" placeholder="" min="0" max="300" step="0.1">
+                <input type="number" class="inputPeso" placeholder="" min="0" max="300" step="0.1">
                 <label>Peso(kg)</label>
-                <button class="increment"><img src="imagenes/flecha.png" alt=""></button>
-                <button class="decrement"><img src="imagenes/flecha.png" alt=""></button>
+                <button class="increment1" id="botonAumentoPeso"><img src="imagenes/flecha.png" alt=""></button>
+                <button class="decrement1" id="botonDecrementoPeso"><img src="imagenes/flecha.png" alt=""></button>
             </div>
             <div class="datosActividad">
-                <select id="">
-                    <option class="seleccionActividad//" disabled selected>Sleccione una opcion</option>
+                <select>
+                    <option class="seleccionActividad//" disabled selected>Seleccione una opcion</option>
                     <option value="">Baja</option>
                     <option value="">Intermedia</option>
                     <option value="">Avanzada</option>
@@ -61,19 +62,31 @@
             </div>
         </div>
     </div>
-    <!--
-    <img src="imagenes/calculadora2.png" class="imgCalculadora" alt="">
-    <p>Calculating...</p>
-    <div class="resultadoCalculo">
-        <p class="pCalculando">Resultado Macronutrientes</p>
-        <div class="analisisIA">
-            <p>Nos parece que estar muy bien en relacion a la cantidad de macronutrientes que tu cuerpo necesita</p>
-        </div>
-        <div class="recomentadionesIA">
-            <p>Aquí te dejaremos unas recomendaciones para que puedas mejorar al maximo tu ingesta de macros</p>
+    <div class="explicacionMacros">
+        <p>Informacion</p>
+        <div class="contenedorInfoMacros">
+            <div class="informacion1">
+                <p>¿Sabes que son los macronutrientes?</p>
+                <p>Los macronutrientes son nutrientes que nuestro cuerpo necesita en grandes cantidades para funcionar correctamente. Se dividen en tres grupos: CARBOHIDRATOS, PROTEINAS y GRASAS.
+                </p>
+            </div>
+            <div class="informacion2">
+                <p>¿Porque es importante conocerlos?</p>
+                <p>Conocer los macronutrientes es clave para tener una alimentación equilibrada. Si no sabemos cómo se equilibran, podemos caer en extremos, es decir, consumir demasiado de uno y muy poco de otro. Esto puede afectar nuestra energía, rendimiento físico y salud mental.
+                </p>
+            </div>
+            <div class="informacion3">
+                <p>¿Para que sirve cada macronutriente?</p>
+                <p>Carbohidratos: Son la principal fuente de energía. Piensa en ellos como el combustible para tu motor. Los encuentras en alimentos como pan, pasta, frutas y verduras.
+                </p>
+                <p>Proteínas: Son esenciales para reparar y construir tejidos. Si haces ejercicio, necesitarás proteínas para ayudar a tus músculos a recuperarse. Las encuentras en carnes, legumbres, huevos y lácteos.
+                </p>
+                <p>Grasas: Aunque a menudo se ven con malos ojos, son necesarias para la absorción de vitaminas y la producción de hormonas. Las grasas saludables están en aguacates, nueces y aceite de oliva.
+                </p>
+            </div>
+            <button onclick="mostrarSiguiente()">Siguiente</button>
         </div>
     </div>
-    -->
     <script src="javaScript/dropdown.js"></script>
 </body>
 </html>

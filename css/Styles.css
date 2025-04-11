@@ -583,35 +583,49 @@ footer{
 .tituloSmartMacros{
     grid-row: 2;
     grid-column: 2 / 5;
-    margin: 1.2em;
+    margin-top: -0.4em;
 }
 .datosSmartMacros{
-    background-color: #5E8D66;
-    background-repeat: repeat-x;
     grid-row: 2 / 4;
     grid-column: 1 / 4;
+    position: relative;
     width: 80%;
     height: 40em;
-    margin-top: 15em;
+    margin-top: 10em;
     margin-bottom: 10em;
     justify-items: center;
     align-content: center;
 }
-.ingresarDatosSmartChef{
+.ingresarDatosSmartMacros{
     display: grid;
+    position: relative;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(5, 20%);
     width: 40em;
     height: 100%;
     background-color: #d6c2a4;
+    animation: bordeIngresarDatosSmartMacros 3s ease-in-out infinite alternate-reverse;
+    border-radius: 50px;
+    z-index: 2;
+}
+@keyframes bordeIngresarDatosSmartMacros {
+    from{
+        border: #a4d6a9 1em solid;
+        box-shadow: #3E4544 0px 0px 50px;
+    }
+    to{
+        border: #a4d6a9 1em solid;
+        box-shadow: none;
+    }
 }
 .tituloIngresarDatosCalculadora{
     grid-row: 1;
     grid-column: 1 / 6;
     text-align: center;
-    font-size: 3em;
+    font-family: "Keania One", sans-serif;
+    color: #3E4544;
+    font-size: 3.5em;
 }
-
 .datosAltura{
     grid-row: 2;
     grid-column: 2;
@@ -619,61 +633,74 @@ footer{
     margin-left: -3em;
     position: relative;
 }
-.datosAltura label{
+.datosAltura label,.datosPeso label{
     position: absolute;
     left: 1.2em;
     text-align: center;
     font-size: 2em;
     width: 3em;
-    top: 40%;
+    top: 70%;
     transform: translateY(-20%);
     transition: all 0.2s ease;
     pointer-events: none;
 }
 .datosAltura input{
     position: absolute;
+    margin-top: 0.3em;
     font-size: 5em;
     overflow: hidden;
     width: 2.5em;
     text-align: center;
-    background-color: #606d6b;
-    border: #5E8D66 0.1em solid;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) 0.1em solid;
     border-radius: 10px;
     scrollbar-width: none;
 }
 .datosAltura input:focus + label,
+input:not(:placeholder-shown) + label,
+.datosPeso input:focus + label,
 input:not(:placeholder-shown) + label{
-    top: -27%;
+    top: -2%;
     left: 0.5em;
     width: 4em;
-    background-color: #606d6b;
-    border: #5E8D66 0.2em solid;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) 0.2em solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: none;
 }
 .datosAltura button{
-    background-color: #606d6b;
+    background-color: #a4d6a9;
     display: flex;
     flex-direction: column;
     border-radius: 1px;
     padding: 0;
-    margin: 0;
     width: 50px;
     align-items: center;
     top: 0.65em;
     left: 12.7em;
     position: relative;
-    z-index: 1;
+    cursor: pointer;
 }
 .increment{
+    margin-top: 1.8em;
     rotate: 180deg;
     border: none;
-    border-left: #5E8D66 0.57em solid;
+    border-left: rgba(62, 69, 68, 0.5) 0.57em solid;
 }
 .decrement{
     border: none;
-    border-right: #5E8D66 0.57em solid;
+    border-right: rgba(62, 69, 68, 0.5) 0.57em solid;
+}
+.increment1{
+    margin-top: 1.8em;
+    rotate: 180deg;
+    border: none;
+    border-left: rgba(62, 69, 68, 0.5) 0.57em solid;
+}
+.decrement1{
+    border: none;
+    border-right: rgba(62, 69, 68, 0.5) 0.57em solid;
 }
 .datosAltura img, .datosPeso img{
     padding: 0;
@@ -688,63 +715,108 @@ input:not(:placeholder-shown) + label{
     margin-top: 2em;
     position: relative;
 }
-.datosPeso label{
-    position: absolute;
-    left: 1.2em;
-    text-align: center;
-    font-size: 2em;
-    width: 3em;
-    top: 40%;
-    transform: translateY(-20%);
-    transition: all 0.2s ease;
-    pointer-events: none;
-}
-.datosPeso input:focus + label,
-input:not(:placeholder-shown) + label{
-    top: -27%;
-    left: 0.5em;
-    width: 4em;
-    background-color: #606d6b;
-    border: #5E8D66 0.2em solid;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: none;
-}
 .datosPeso input{
     position: absolute;
+    margin-top: 0.3em;
     font-size: 5em;
     overflow: hidden;
     width: 2.5em;
     text-align: center;
-    background-color: #606d6b;
-    border: #5E8D66 0.1em solid;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) 0.1em solid;
     border-radius: 10px;
     scrollbar-width: none;
 }
 .datosPeso button{
-    background-color: #606d6b;
+    background-color: #a4d6a9;
     display: flex;
     flex-direction: column;
     border-radius: 1px;
     padding: 0;
-    margin: 0;
     width: 50px;
     align-items: center;
     top: 0.65em;
     left: 12.7em;
     position: relative;
-    z-index: 1;
+    cursor: pointer;
 }
 .datosActividad{
     grid-row: 3 / 4;
     grid-column: 1 / 6;
     display: flex;
     flex-direction: row;
+    margin-top: 8em;
+    align-items: center;
+    justify-content: space-around;
 }
 .datosActividad select{
     height: 2em;
+    font-size: 1.5em;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) solid 0.3em;
+    border-radius: 10px;
+    margin-right: -2em;
+}
+.datosActividad p{
+    font-size: 1.5em;
+    margin-right: 1em;
 }
 .datosSexo{
     grid-row: 4 / 5;
     grid-column: 1 / 6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8em;
 }
+.datosSexo select{
+    height: 2em;
+    font-size: 1.5em;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) solid 0.3em;
+    border-radius: 10px;
+    margin-left: -1em;
+}
+.datosSexo p{
+    font-size: 1.5em;
+    margin-right: 4em;
+}
+.explicacionMacros{
+    grid-row: 2;
+    grid-column: 3 / 6;
+    margin-left: 8em;
+    margin-right: 5em;
+    padding: 1em;
+    width: 58em;
+    height: 22em;
+    display: flex;
+    background-color: #b8d6a4; 
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+.explicacionMacros p{
+    font-size: 2em;
+    font-family: "Bebas Neue", sans-serif;
+}
+.contenedorInfoMacros{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+/* Estilo común para la animación */
+.informacion1{
+    display: block;
+    transform: translateX(0%);
+}
+.informacion2{
+    display: none;
+    transform: translateX(100%);
+}
+.informacion3{
+    display: none;
+    transform: translateX(200%);    
+}
+

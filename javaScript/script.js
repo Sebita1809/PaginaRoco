@@ -1,11 +1,8 @@
-/*const input = document.getElementById('input');
-const animation = document.getElementById('animation');
+let currentSlide = 0;
 
-input.addEventListener('keydown', () => {
-    document.getElementById('animation').src = 'imagenes/Pixel2.jpg';
-
-    // Eliminar la clase "show" después de un corto período para reiniciar la animación
-    setTimeout(() => {
-        document.getElementById('animation').src = 'imagenes/Pixel1.jpg';
-    }, 300); // Esto debe coincidir con la duración de la transición CSS
-});*/
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+}
