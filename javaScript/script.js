@@ -1,8 +1,6 @@
-let currentSlide = 0;
+const expandButton = document.getElementById("expandButton");
+const information = document.getElementById("information");
 
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.slide');
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-}
+expandButton.addEventListener("click", () => {
+  expandButton.classList.toggle("expanded");
+});

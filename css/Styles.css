@@ -702,7 +702,7 @@ input:not(:placeholder-shown) + label{
     border: none;
     border-right: rgba(62, 69, 68, 0.5) 0.57em solid;
 }
-.datosAltura img, .datosPeso img{
+.datosAltura img, .datosPeso img, .datosEdad img{
     padding: 0;
     margin: 0;
     width: 3.7em;
@@ -745,7 +745,7 @@ input:not(:placeholder-shown) + label{
     grid-column: 1 / 6;
     display: flex;
     flex-direction: row;
-    margin-top: 8em;
+    margin-top: 4em;
     align-items: center;
     justify-content: space-around;
 }
@@ -755,7 +755,6 @@ input:not(:placeholder-shown) + label{
     background-color: #a4d6a9;
     border: rgba(62, 69, 68, 0.5) solid 0.3em;
     border-radius: 10px;
-    margin-right: -2em;
 }
 .datosActividad p{
     font-size: 1.5em;
@@ -768,7 +767,7 @@ input:not(:placeholder-shown) + label{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 8em;
+    margin-top: -2em;
 }
 .datosSexo select{
     height: 2em;
@@ -782,41 +781,128 @@ input:not(:placeholder-shown) + label{
     font-size: 1.5em;
     margin-right: 4em;
 }
+.datosEdad{
+    grid-row: 5;
+    grid-column: 1;
+    margin-left: -2.7em;
+    margin-top: 2em;
+    position: relative;
+}
+.datosEdad input{
+    position: absolute;
+    margin-top: -0.4em;
+    margin-left: 3.1em;
+    font-size: 5em;
+    overflow: hidden;
+    width: 2.5em;
+    text-align: center;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) 0.1em solid;
+    border-radius: 10px;
+    scrollbar-width: none;
+}
+.datosEdad button{
+    background-color: #a4d6a9;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1px;
+    padding: 0;
+    width: 50px;
+    align-items: center;
+    top: -4.95em;
+    left: 31.3em;
+    position: relative;
+    cursor: pointer;
+}
+.datosEdad label{
+    text-align: center;
+    font-size: 2em;
+    width: 3em;
+}
+.datosEdad img{
+
+}
+.botonMasInfo{
+    position: relative;
+    grid-column: 3 / 6;
+    grid-row: 2;
+    margin-left: 9.5em;
+    margin-top: 12em;
+    padding: 0;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+    border: none;
+    background-color: #a4d6a9;
+    animation: movimientoBoton 1s infinite ease-in-out alternate-reverse;
+}
+.botonMasInfo img{
+    width: 50%;
+    height: 50%;
+}
+@keyframes movimientoBoton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
 .explicacionMacros{
     grid-row: 2;
     grid-column: 3 / 6;
     margin-left: 8em;
     margin-right: 5em;
+    margin-top: 10em;
     padding: 1em;
-    width: 58em;
-    height: 22em;
-    display: flex;
-    background-color: #b8d6a4; 
+    width: 3em;
+    height: 3em;
+    display: none;
+    border-radius: 100%;
+    background-color: #a4d6a9; 
     flex-direction: column;
     text-align: center;
     overflow: hidden;
 }
 .explicacionMacros p{
-    font-size: 2em;
+    font-size: 3em;
     font-family: "Bebas Neue", sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0.5em;
 }
 .contenedorInfoMacros{
     display: flex;
-    flex-direction: row;
-    position: relative;
     overflow: hidden;
 }
-/* Estilo común para la animación */
-.informacion1{
-    display: block;
-    transform: translateX(0%);
+.informacion p{
+    color: #606d6b;
 }
-.informacion2{
-    display: none;
-    transform: translateX(100%);
+.informacion{
+    font-size: 0.5em;
+    width: 40%; 
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: #C2D6C5; 
+    border-radius: 20px;
+    transition: width 0.3s ease; 
+    text-align: start;
 }
-.informacion3{
-    display: none;
-    transform: translateX(200%);    
+.informacion:hover {
+    width: calc(200em); 
+    overflow: auto;
+    font-size: 0.7em;
+    z-index: 1;
+    padding: 1em;
+    filter: none;
 }
-
+.informacion::-webkit-scrollbar{
+    background-color: transparent;
+}.informacion::-webkit-scrollbar-track{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.informacion::-webkit-scrollbar-thumb{
+    background-color: #606d6b;
+    border-radius: 200px;
+}

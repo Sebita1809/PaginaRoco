@@ -43,39 +43,46 @@
                 <button class="decrement1" id="botonDecrementoPeso"><img src="imagenes/flecha.png" alt=""></button>
             </div>
             <div class="datosActividad">
+                <p>Nivel de Actividad Fisica</p>
+                <p>Sexo</p>
+            </div>
+            <div class="datosSexo">
                 <select>
                     <option class="seleccionActividad//" disabled selected>Seleccione una opcion</option>
                     <option value="">Baja</option>
                     <option value="">Intermedia</option>
                     <option value="">Avanzada</option>
                 </select>
-                <p>Nivel de Actividad Fisica</p>
-            </div>
-            <div class="datosSexo">
                 <select class="seleccionSexo" id="">
                     <option value="" selected disabled>Seleccione una opcion</option>
                     <option value="">Femenino</option>
                     <option value="">Masculino</option>
                     <option value="">Prefiero no decirlo</option>
                 </select>
-                <p>Sexo</p>
+            </div>
+            <div class="datosEdad">
+                <input type="number" class="inputEdad" placeholder="" min="1" max="100" step="1">
+                <label>Edad</label>
+                <button class="increment1" id="botonAumentoEdad"><img src="imagenes/flecha.png" alt=""></button>
+                <button class="decrement1" id="botonDecrementoEdad"><img src="imagenes/flecha.png" alt=""></button>
             </div>
         </div>
     </div>
+    <button class="botonMasInfo"><img src="imagenes/iconoMas.png" class="imagenBoton" alt=""></button>
     <div class="explicacionMacros">
         <p>Informacion</p>
         <div class="contenedorInfoMacros">
-            <div class="informacion1">
+            <div class="informacion">
                 <p>¿Sabes que son los macronutrientes?</p>
                 <p>Los macronutrientes son nutrientes que nuestro cuerpo necesita en grandes cantidades para funcionar correctamente. Se dividen en tres grupos: CARBOHIDRATOS, PROTEINAS y GRASAS.
                 </p>
             </div>
-            <div class="informacion2">
+            <div class="informacion">
                 <p>¿Porque es importante conocerlos?</p>
                 <p>Conocer los macronutrientes es clave para tener una alimentación equilibrada. Si no sabemos cómo se equilibran, podemos caer en extremos, es decir, consumir demasiado de uno y muy poco de otro. Esto puede afectar nuestra energía, rendimiento físico y salud mental.
                 </p>
             </div>
-            <div class="informacion3">
+            <div class="informacion">
                 <p>¿Para que sirve cada macronutriente?</p>
                 <p>Carbohidratos: Son la principal fuente de energía. Piensa en ellos como el combustible para tu motor. Los encuentras en alimentos como pan, pasta, frutas y verduras.
                 </p>
@@ -84,7 +91,6 @@
                 <p>Grasas: Aunque a menudo se ven con malos ojos, son necesarias para la absorción de vitaminas y la producción de hormonas. Las grasas saludables están en aguacates, nueces y aceite de oliva.
                 </p>
             </div>
-            <button onclick="mostrarSiguiente()">Siguiente</button>
         </div>
     </div>
     <script src="javaScript/dropdown.js"></script>

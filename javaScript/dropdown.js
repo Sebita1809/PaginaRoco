@@ -62,6 +62,23 @@ document.querySelector('.decrement1').addEventListener('click', function() {
     }
 });
 
-
-
+document.querySelector('.botonMasInfo').addEventListener('click', function() {
+    const informacion = document.querySelector('.explicacionMacros');
+    const imagenBoton = document.querySelector('.imagenBoton')
+    const botonMasInfo = document.querySelector('.botonMasInfo')
+    if (informacion.style.display == 'none'){
+        informacion.style.display = 'flex'
+        informacion.style.width = '58em'
+        informacion.style.height = '22em'
+        informacion.style.borderRadius = '20px'
+        imagenBoton.style.transform = 'rotate(45deg)'
+        botonMasInfo.style.animation = 'none'
+    } else {
+        informacion.style.display = 'none'
+        informacion.style.width = '3em'
+        informacion.style.heigth = '3em'
+        imagenBoton.style.transform = 'none'
+        botonMasInfo.style.animation = 'movimientoBoton 1s infinite ease-in-out alternate-reverse'
+    }
+})
 
