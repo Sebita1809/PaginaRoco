@@ -58,7 +58,7 @@ document.querySelector('.decrement1').addEventListener('click', function() {
     } else if(input.value > 300){
         input.value = 300
     } else {
-        input.value = (valorDefault - 1); // Incrementa el valor
+        input.value = (valorDefault - 1);
     }
 });
 document.querySelector('.increment2').addEventListener('click', function() {
@@ -83,6 +83,19 @@ document.querySelector('.decrement2').addEventListener('click', function() {
         input.value = (valorDefault - 1); // Incrementa el valor
     }
 });
+
+//CALCULO DE MACROS PARA MacrosCaulculator//////////////////////////////////
+const peso = document.querySelector('.inputPeso')
+const altura = document.querySelector('.inputAltura')
+const edad = document.querySelector('.inputEdad')
+const lnivelActividad = document.querySelector('.seleccionActividad')
+const sexo = document.querySelector('.seleccionSexo')
+
+console.log(peso.value)
+
+
+
+
 
 document.querySelector('.botonMasInfo').addEventListener('click', function() {
     const informacion = document.querySelector('.explicacionMacros');
