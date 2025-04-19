@@ -758,7 +758,7 @@ input:not(:placeholder-shown) + label{
 }
 .datosActividad p{
     font-size: 1.5em;
-    margin-right: 1em;
+    margin-left: -4em;
 }
 .datosSexo{
     grid-row: 4 / 5;
@@ -775,7 +775,6 @@ input:not(:placeholder-shown) + label{
     background-color: #a4d6a9;
     border: rgba(62, 69, 68, 0.5) solid 0.3em;
     border-radius: 10px;
-    margin-left: -1em;
 }
 .datosSexo p{
     font-size: 1.5em;
@@ -784,14 +783,24 @@ input:not(:placeholder-shown) + label{
 .datosEdad{
     grid-row: 5;
     grid-column: 1;
-    margin-left: -2.7em;
-    margin-top: 2em;
+    margin-left: 13em;
+    margin-top: -2em;
     position: relative;
 }
-.datosEdad input{
+.datosEdad label {
     position: absolute;
-    margin-top: -0.4em;
-    margin-left: 3.1em;
+    left: 1.5em;
+    text-align: center;
+    font-size: 2em;
+    width: 3em;
+    top: 42%;
+    transform: translateY(-20%);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+.datosEdad input {
+    position: absolute;
+    margin-top: 0.3em;
     font-size: 5em;
     overflow: hidden;
     width: 2.5em;
@@ -801,6 +810,17 @@ input:not(:placeholder-shown) + label{
     border-radius: 10px;
     scrollbar-width: none;
 }
+.datosEdad input:focus + label,
+.datosEdad input:not(:placeholder-shown) + label {
+    top: -1.2%;
+    left: 0.5em;
+    width: 2.5em;
+    background-color: #a4d6a9;
+    border: rgba(62, 69, 68, 0.5) 0.2em solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+}
 .datosEdad button{
     background-color: #a4d6a9;
     display: flex;
@@ -809,15 +829,20 @@ input:not(:placeholder-shown) + label{
     padding: 0;
     width: 50px;
     align-items: center;
-    top: -4.95em;
-    left: 31.3em;
+    top: 0.65em;
+    left: 12.7em;
     position: relative;
     cursor: pointer;
 }
-.datosEdad label{
-    text-align: center;
-    font-size: 2em;
-    width: 3em;
+.increment2{
+    margin-top: 1.8em;
+    rotate: 180deg;
+    border: none;
+    border-left: rgba(62, 69, 68, 0.5) 0.57em solid;
+}
+.decrement2{
+    border: none;
+    border-right: rgba(62, 69, 68, 0.5) 0.57em solid;
 }
 .datosEdad img{
 

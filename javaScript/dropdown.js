@@ -61,6 +61,28 @@ document.querySelector('.decrement1').addEventListener('click', function() {
         input.value = (valorDefault - 1); // Incrementa el valor
     }
 });
+document.querySelector('.increment2').addEventListener('click', function() {
+    const input = document.querySelector('.inputEdad');
+    const valorDefault = parseInt(input.value) || 0
+    if(input.value >= 100){
+        input.value = 100
+    }else if(input.value < 0){
+        input.value = null
+    } else{
+        input.value = (valorDefault + 1); // Incrementa el valor
+    }
+});
+document.querySelector('.decrement2').addEventListener('click', function() {
+    const input = document.querySelector('.inputEdad');
+    const valorDefault = parseInt(input.value) || 0
+    if(input.value <= 0){
+        input.value = null
+    } else if(input.value > 100){
+        input.value = 100
+    } else {
+        input.value = (valorDefault - 1); // Incrementa el valor
+    }
+});
 
 document.querySelector('.botonMasInfo').addEventListener('click', function() {
     const informacion = document.querySelector('.explicacionMacros');
