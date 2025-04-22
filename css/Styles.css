@@ -931,3 +931,16 @@ input:not(:placeholder-shown) + label{
     background-color: #606d6b;
     border-radius: 200px;
 }
+.calculoMacros{
+    grid-column: 3 / 6;
+    grid-row: 3 / 5;
+    background-color: #3E4544;
+}
+.botonCalcular{
+    grid-column: 4 / 6;
+    grid-row: 3 / 5;
+    width: 5em;
+    height: 3em;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2em;
+}

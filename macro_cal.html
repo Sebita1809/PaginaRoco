@@ -31,7 +31,7 @@
         <div class="ingresarDatosSmartMacros">
             <p class="tituloIngresarDatosCalculadora">Ingrese sus datos</p>
             <div class="datosAltura">
-                <input type="number" id="inputAltura" class="inputAltura" min="0" max="3" placeholder="">
+                <input type="number" id="inputAltura" class="inputAltura" min="0" max="300" placeholder="">
                 <label>Altura(m)</label>
                 <button class="increment" id="botonAumentoAltura"><img src="imagenes/flecha.png" alt=""></button>
                 <button class="decrement" id="botonDecrementoAltura"><img src="imagenes/flecha.png" alt=""></button>
@@ -47,7 +47,7 @@
                 <p>Sexo</p>
             </div>
             <div class="datosSexo">
-                <select id="seleccionActividad">
+                <select class="seleccionActividad">
                     <option disabled selected>Seleccione una opcion</option>
                     <option value="">Baja</option>
                     <option value="">Intermedia</option>
@@ -93,6 +93,13 @@
             </div>
         </div>
     </div>
+    <div class="calculoMacros">
+        <p class="proteinas">El resultado del calculo es:</p>
+        <p class="carbohidratos">Proteinas: </p>
+        <p class="grasas">Carbohidratos: </p>
+        <p>Grasas: </p>
+    </div>
+    <button class="botonCalcular">Calcular</button>
     <script src="javaScript/dropdown.js"></script>
 </body>
 </html>
