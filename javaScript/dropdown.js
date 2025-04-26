@@ -88,32 +88,32 @@ document.querySelector('.decrement2').addEventListener('click', function() {
 const peso = document.querySelector('.inputPeso')
 const altura = document.querySelector('.inputAltura')
 const edad = document.querySelector('.inputEdad')
-const nivelActividad = document.getElementsByClassName('seleccionActividad')
+const nivelActividad = document.querySelector('.seleccionActividad')
 const sexo = document.querySelector('.seleccionSexo')
-const BMR = 0
-const TDEE = 0
+let BMR = 0
+let TDEE = 0
 const divCalculoMacros = document.querySelector('.calculoMacros')
 const proteinas = document.querySelector('.proteinas')
 const carbohidratos = document.querySelector('.carbohidratos')
 const grasas = document.querySelector('.grasas')
 document.querySelector('.botonCalcular').addEventListener('click', function(){
-    console.log(nivelActividad.value)
+
     if(sexo.value == "Masculino"){
         BMR = 88.362 + (13.397 * peso.value) + (4.799 * altura.value) - (5.677 * edad.value)
     } else if(sexo.value == "Femenino"){
         BMR = 447.593 + (9.247 * peso.value) + (3.098 * altura.value) - (4.330 * edad.value)
     }
     switch (nivelActividad.value){
-        case "Basico":
+        case "Baja":
             TDEE = BMR * 1.375
-        case "Intermedio":
+        case "Intermedia":
             TDEE = BMR * 1.55
-        case "Avanzado":
+        case "Avanzada":
             TDEE = BMR * 1.725
     } 
-    proteinas.innerHTML = "Proteinas necesarias: " + TDEE*0.1 + " - " + TDEE*0.35
-    grasas.innerHTML = "Grasas necesarios: " + TDEE*0.2 + " - " + TDEE*0.35
-    carbohidratos.innerHTML = "Carbohidratos necesarios: " + TDEE*0.3
+    proteinas.innerHTML = "Proteinas necesarias: " + Math.trunc(TDEE*0.1) + " - " + Math.trunc(TDEE*0.35)
+    grasas.innerHTML = "Grasas necesarios: " + Math.trunc(TDEE*0.2) + " - " + Math.trunc(TDEE*0.35)
+    carbohidratos.innerHTML = "Carbohidratos necesarios: " + Math.trunc(TDEE*0.3)
 })
 
 

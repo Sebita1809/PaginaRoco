@@ -934,6 +934,7 @@ input:not(:placeholder-shown) + label{
 .calculoMacros{
     grid-column: 3 / 6;
     grid-row: 3 / 5;
+    margin: 3em;
     background-color: #3E4544;
 }
 .botonCalcular{
