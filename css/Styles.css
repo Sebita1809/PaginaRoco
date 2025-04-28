@@ -936,6 +936,11 @@ input:not(:placeholder-shown) + label{
     grid-row: 3 / 5;
     margin: 3em;
     background-color: #3E4544;
+    border-radius: 50px;
+}
+.contenedorCalculoMacros{
+    display: flex;
+    flex-direction: row;
 }
 .botonCalcular{
     grid-column: 4 / 6;

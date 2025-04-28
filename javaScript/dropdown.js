@@ -97,24 +97,26 @@ const proteinas = document.querySelector('.proteinas')
 const carbohidratos = document.querySelector('.carbohidratos')
 const grasas = document.querySelector('.grasas')
 document.querySelector('.botonCalcular').addEventListener('click', function(){
-
-    if(sexo.value == "Masculino"){
-        BMR = 88.362 + (13.397 * peso.value) + (4.799 * altura.value) - (5.677 * edad.value)
-    } else if(sexo.value == "Femenino"){
-        BMR = 447.593 + (9.247 * peso.value) + (3.098 * altura.value) - (4.330 * edad.value)
-    }
-    switch (nivelActividad.value){
-        case "Baja":
-            TDEE = BMR * 1.375
-        case "Intermedia":
-            TDEE = BMR * 1.55
-        case "Avanzada":
-            TDEE = BMR * 1.725
-    } 
-    proteinas.innerHTML = "Proteinas necesarias: " + Math.trunc(TDEE*0.1) + " - " + Math.trunc(TDEE*0.35)
-    grasas.innerHTML = "Grasas necesarios: " + Math.trunc(TDEE*0.2) + " - " + Math.trunc(TDEE*0.35)
-    carbohidratos.innerHTML = "Carbohidratos necesarios: " + Math.trunc(TDEE*0.3)
-})
+    setTimeout(function(){
+        if(sexo.value == "Masculino"){
+            BMR = 88.362 + (13.397 * peso.value) + (4.799 * altura.value) - (5.677 * edad.value)
+        } else if(sexo.value == "Femenino"){
+            BMR = 447.593 + (9.247 * peso.value) + (3.098 * altura.value) - (4.330 * edad.value)
+        }
+        switch (nivelActividad.value){
+            case "Baja":
+                TDEE = BMR * 1.375
+            case "Intermedia":
+                TDEE = BMR * 1.55
+            case "Avanzada":
+                TDEE = BMR * 1.725
+        } 
+        proteinas.innerHTML = "Proteinas necesarias: " + Math.trunc(TDEE*0.1) + " / " + Math.trunc(TDEE*0.35) + "  (10%-35%) de los macronuetrientes necesarios"
+        grasas.innerHTML = "Grasas necesarios: " + Math.trunc(TDEE*0.2) + " / " + Math.trunc(TDEE*0.35) + "  (20%-35%) de los macronuetrientes necesarios"
+        carbohidratos.innerHTML = "Carbohidratos necesarios: " + Math.trunc(TDEE*0.3) + "  30% de los macronuetrientes necesarios"
+        document.querySelector('.calculoMacros').style.opacity = 1
+    }, 5000)
+}),
 
 
 
